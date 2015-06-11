@@ -21,9 +21,6 @@
       "seti-ui"
       "seti-syntax"
     ]
-    disabledPackages: [
-      "typewriter-sounds"
-    ]
     autoHideMenuBar: true
   "tree-view":
     {}
