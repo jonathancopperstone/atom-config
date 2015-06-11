@@ -1,0 +1,35 @@
+"*":
+  "exception-reporting":
+    userId: "5ef06461-94b2-e661-6bdb-1e4facdfac6c"
+  "release-notes":
+    viewedVersion: "0.96.0-a83a6e5"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "ea44d27071c3e91095453ed19e1d05c078fe9aa4"
+  editor:
+    fontSize: 12
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    fontFamily: "Consolas"
+    invisibles:
+      {}
+    tabLength: 4
+    preferredLineLength: 140
+  core:
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+    disabledPackages: [
+      "typewriter-sounds"
+    ]
+    autoHideMenuBar: true
+  "tree-view":
+    {}
+metrics:
+  userId: "ea44d27071c3e91095453ed19e1d05c078fe9aa4"
+welcome:
+  showOnStartup: false
+"exception-reporting":
+  userId: "95dec4d0-88eb-eeca-461d-21a924d6942d"
