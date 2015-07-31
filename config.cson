@@ -12,8 +12,7 @@
     softWrap: true
     softWrapAtPreferredLineLength: true
     fontFamily: "Consolas"
-    invisibles:
-      {}
+    invisibles: {}
     tabLength: 4
     preferredLineLength: 140
   core:
@@ -25,8 +24,16 @@
       "typewriter-sounds"
     ]
     autoHideMenuBar: true
-  "tree-view":
-    {}
+  "tree-view": {}
+".js.regexp.source":
+  editor:
+    preferredLineLength: 140
+".cshtml.html.text":
+  editor:
+    preferredLineLength: 140
+".js.source":
+  editor:
+    preferredLineLength: 140
 metrics:
   userId: "ea44d27071c3e91095453ed19e1d05c078fe9aa4"
 welcome:
