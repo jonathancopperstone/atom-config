@@ -2,3 +2,4 @@ storage
 compile-cache
 .apm
 .npm
+.node-gyp
