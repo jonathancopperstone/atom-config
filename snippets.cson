@@ -1,0 +1,5 @@
+'.source.js':
+    # Angular
+    'module':
+        'prefix': 'module'
+        'body': '(function() {\n    \'use strict\'\n\n      angular.module($2)\n\n}());'
