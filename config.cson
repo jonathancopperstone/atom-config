@@ -12,18 +12,16 @@
     softWrap: true
     softWrapAtPreferredLineLength: true
     fontFamily: "Consolas"
-    invisibles:
-      {}
-    tabLength: 4
+    invisibles: {}
     preferredLineLength: 140
+    tabLength: 4
   core:
     themes: [
       "seti-ui"
       "seti-syntax"
     ]
     autoHideMenuBar: true
-  "tree-view":
-    {}
+  "tree-view": {}
 metrics:
   userId: "ea44d27071c3e91095453ed19e1d05c078fe9aa4"
 welcome:
