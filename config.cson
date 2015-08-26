@@ -13,8 +13,8 @@
     softWrapAtPreferredLineLength: true
     fontFamily: "Consolas"
     invisibles: {}
-    tabLength: 4
     preferredLineLength: 140
+    tabLength: 4
   core:
     themes: [
       "seti-ui"

@@ -3,3 +3,30 @@
     'module':
         'prefix': 'module'
         'body': '(function() {\n    \'use strict\'\n\n      angular.module($2)\n\n}());'
+
+    # Testing
+    'testing':
+        'prefix': 'testshell'
+        'body': '''
+            describe('$1', () => {
+
+                var $2Service;
+
+                beforeEach(() => {
+                    module('$3');
+                });
+
+                beforeEach(inject(($injector) => {
+                    $4Service = $injector.get('$5');
+                }));
+
+                describe('$6', () => {
+
+                    it('$7', () => {
+
+                    });
+
+                });
+
+            });
+        '''
