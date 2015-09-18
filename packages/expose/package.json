@@ -1,7 +1,7 @@
 {
   "name": "expose",
   "main": "./lib/expose",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Quick tab overview of open files",
   "keywords": [
     "tab",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrodalgaard/atom-expose"
+    "url": "git+https://github.com/mrodalgaard/atom-expose.git"
   },
   "license": "MIT",
   "engines": {
@@ -29,11 +29,11 @@
   "bugs": {
     "url": "https://github.com/mrodalgaard/atom-expose/issues"
   },
-  "homepage": "https://github.com/mrodalgaard/atom-expose",
-  "_id": "expose@0.5.0",
-  "_shasum": "1027a44707da480bdcae044afb3a8e502af50303",
-  "_resolved": "file:..\\d-115726-5508-scjfx8\\package.tgz",
-  "_from": "..\\d-115726-5508-scjfx8\\package.tgz",
+  "homepage": "https://github.com/mrodalgaard/atom-expose#readme",
+  "_id": "expose@0.6.0",
+  "_shasum": "a490b0db4743b74dfbc07c0ea0bc577f5bfaad30",
+  "_resolved": "file:..\\d-115818-7768-r2bgvo\\package.tgz",
+  "_from": "..\\d-115818-7768-r2bgvo\\package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
