@@ -26,6 +26,30 @@
             }
         '''
 
+    'Unit Test (ES6)':
+        'prefix': 'ng.svc.test'
+        'body': '''
+            import _$1Module from '$2';
+
+            fdescribe(_$3Module.name, () => {
+
+                let $4Service;
+
+                beforeEach(() => {
+                    angular.mock.module(_$5.name);
+                    inject(($injector) => {
+                        $6Service = $injector.get(_$7.name);
+                    });
+                });
+
+                describe('contructor', () => {
+
+                    $8
+                });
+
+            });
+        '''
+
     # Testing
     'testing':
         'prefix': 'testshell'
