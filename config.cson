@@ -22,18 +22,18 @@
     ]
     autoHideMenuBar: true
   "tree-view": {}
-".cshtml.html.text":
+".js.regexp.source":
   editor:
     preferredLineLength: 140
-".js.regexp.source":
+".cshtml.html.text":
   editor:
     preferredLineLength: 140
 ".js.source":
   editor:
     preferredLineLength: 140
-"exception-reporting":
-  userId: "95dec4d0-88eb-eeca-461d-21a924d6942d"
-welcome:
-  showOnStartup: false
 metrics:
   userId: "ea44d27071c3e91095453ed19e1d05c078fe9aa4"
+welcome:
+  showOnStartup: false
+"exception-reporting":
+  userId: "95dec4d0-88eb-eeca-461d-21a924d6942d"
