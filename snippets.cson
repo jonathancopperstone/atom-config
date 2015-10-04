@@ -59,7 +59,7 @@
             (function() {
                 'use strict';
 
-                module.export = function(gulp, config) {
+                module.exports = function(gulp, config) {
 
                     var help,
                         $1 = require('$2');
