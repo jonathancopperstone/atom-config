@@ -1,8 +1,54 @@
 '.source.js':
     # Angular
+    # ES5 Templates
+
     'module':
         'prefix': 'module'
         'body': '(function() {\n    \'use strict\'\n\n      angular.module($2)\n\n}());'
+
+    # ES6 Templates
+
+    'Service (ES6)':
+        'prefix': 'ng.svc'
+        'body': '''
+            const $1ServiceName = '$2Service';
+
+            class $3Service {
+
+                constructor() {
+
+                }
+            }
+
+            export default {
+                name: $4ServiceName,
+                main: $5Service
+            }
+        '''
+
+    'Unit Test (ES6)':
+        'prefix': 'ng.svc.test'
+        'body': '''
+            import _$1Module from '$2';
+
+            fdescribe(_$3Module.name, () => {
+
+                let $4Service;
+
+                beforeEach(() => {
+                    angular.mock.module(_$5.name);
+                    inject(($injector) => {
+                        $6Service = $injector.get(_$7.name);
+                    });
+                });
+
+                describe('contructor', () => {
+
+                    $8
+                });
+
+            });
+        '''
 
     # Testing
     'testing':

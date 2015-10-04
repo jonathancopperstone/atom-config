@@ -29,14 +29,11 @@ class ExposeView extends View
 
   drawFallback: ->
     objectClass = @item.constructor.name
+    iconClass = 'icon-' + @item.getIconName() if @item.getIconName
     @tabBody.html $$ ->
-      @a class: switch objectClass
+      @a class: iconClass or switch objectClass
         when 'TextEditor' then 'icon-file-code'
-        when 'SettingsView' then 'icon-tools'
-        when 'ResultsPaneView' then 'icon-search'
         when 'ArchiveEditor' then 'icon-file-zip'
-        when 'MarkdownPreviewView' then 'icon-markdown'
-        when 'ShowTodoView' then 'icon-checklist'
         else 'icon-file-text'
 
   drawImage: ->
@@ -108,7 +105,9 @@ class ExposeView extends View
     @tabBody.html canvas
 
   activateTab: (event) ->
-    atom.workspace.paneForItem(@item).activateItem(@item)
+    pane = atom.workspace.paneForItem(@item)
+    pane.activate()
+    pane.activateItem(@item)
 
   closeTab: (event) ->
     event?.stopPropagation()
