@@ -1,4 +1,5 @@
 '.source.js':
+
     # Angular
     # ES5 Templates
 
@@ -50,7 +51,32 @@
             });
         '''
 
+    # gulp
+
+    'gulp task':
+        'prefix': 'gulp.task'
+        'body': '''
+            (function() {
+                'use strict';
+
+                module.export = function(gulp, config) {
+
+                    var help,
+                        $1 = require('$2');
+
+                    help = "$3";
+                    gulp.task('$4', help, function() {
+                        return gulp
+                                .src($5)
+                    });
+                };
+
+            });
+        '''
+
+
     # Testing
+
     'testing':
         'prefix': 'testshell'
         'body': '''
