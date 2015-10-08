@@ -122,3 +122,26 @@
             ----
 
         '''
+
+    'README with Contents':
+        'prefix': 'README -contents'
+        'body': '''
+            ## $1
+
+            $2
+
+            ##### Contents
+
+            - [Using $1](#using-$1)
+            - [Understanding $1](#understanding-$1)
+            - [Developing on this library](#developing-on-this-library)
+
+            ### Using $1
+            ----
+
+            ### Understanding $1
+            ----
+
+            ### Developing on this library
+            ----
+        '''
