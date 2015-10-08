@@ -71,6 +71,7 @@
             };
         '''
 
+    #
 
     # Testing
 
@@ -98,4 +99,26 @@
                 });
 
             });
+        '''
+
+# Markdown Snippets
+
+'.source.gfm':
+
+    'README':
+        'prefix': 'README'
+        'body': '''
+            ## $1
+
+            $2
+
+            ### Using $1
+            ----
+
+            ### Understanding $1
+            ----
+
+            ### Developing on this library
+            ----
+
         '''
