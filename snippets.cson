@@ -56,22 +56,19 @@
     'gulp task':
         'prefix': 'gulp.task'
         'body': '''
-            (function() {
-                'use strict';
+            'use strict';
 
-                module.exports = function(gulp, config) {
+            module.exports = function(gulp, config) {
 
-                    var help,
-                        $1 = require('$2');
+                var help,
+                    $1 = require('$2');
 
-                    help = "$3";
-                    gulp.task('$4', help, function() {
-                        return gulp
-                                .src($5)
-                    });
-                };
-
-            }());
+                help = "$3";
+                gulp.task('$4', help, function() {
+                    return gulp
+                            .src($5)
+                });
+            };
         '''
 
     'gulp workflow':
@@ -117,4 +114,49 @@
                 });
 
             });
+        '''
+
+# Markdown Snippets
+
+'.source.gfm':
+
+    'README':
+        'prefix': 'README'
+        'body': '''
+            ## $1
+
+            $2
+
+            ### Using $1
+            ----
+
+            ### Understanding $1
+            ----
+
+            ### Developing on this library
+            ----
+
+        '''
+
+    'README with Contents':
+        'prefix': 'README -contents'
+        'body': '''
+            ## $1
+
+            $2
+
+            ##### Contents
+
+            - [Using $1](#using-$1)
+            - [Understanding $1](#understanding-$1)
+            - [Developing on this library](#developing-on-this-library)
+
+            ### Using $1
+            ----
+
+            ### Understanding $1
+            ----
+
+            ### Developing on this library
+            ----
         '''
