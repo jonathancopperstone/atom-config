@@ -71,7 +71,22 @@
             };
         '''
 
-    #
+    'gulp workflow':
+        'prefix': 'gulp.workflow'
+        'body': '''
+            (function() {
+                'use strict';
+
+                module.exports = function(gulp) {
+
+                    var help = '$1';
+                    gulp.task('$2', help, [
+                        '$3'
+                    ]);
+                };
+
+            }());
+        '''
 
     # Testing
 
