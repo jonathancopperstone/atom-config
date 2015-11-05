@@ -13,7 +13,7 @@ describe "ExposeTabView", ->
     it "can populate empty item", ->
       exposeTabView = new ExposeTabView
       expect(Object.getOwnPropertyNames(exposeTabView.item)).toHaveLength 0
-      expect(exposeTabView.find('.title').text()).toBe 'newfile'
+      expect(exposeTabView.find('.title').text()).toBe 'untitled'
       expect(exposeTabView.tabBody.find('a')).toHaveLength 1
       expect(exposeTabView.tabBody.find('a').attr('class')).toContain 'text'
 
@@ -49,7 +49,7 @@ describe "ExposeTabView", ->
       runs ->
         atom.commands.dispatch workspaceElement, 'settings-view:open'
         waitsFor ->
-          atom.workspace.getActivePaneItem()?
+          atom.workspace.getActivePaneItem()
         runs ->
           item = atom.workspace.getActivePaneItem()
           exposeTabView = new ExposeTabView(item)
@@ -95,9 +95,12 @@ describe "ExposeTabView", ->
         item = atom.workspace.getActivePaneItem()
         exposeTabView = new ExposeTabView(item)
 
-        expect(exposeTabView.item).toBeDefined()
-        expect(exposeTabView.title).toBe 'sample1.txt'
-        expect(exposeTabView.tabBody.find('canvas')).toHaveLength 1
+        waitsFor ->
+          exposeTabView.tabBody.html()
+        runs ->
+          expect(exposeTabView.item).toBeDefined()
+          expect(exposeTabView.title).toBe 'sample1.txt'
+          expect(exposeTabView.tabBody.find('atom-text-editor-minimap')).toHaveLength 1
 
   describe "closeTab()", ->
     it "destroys selected tab item", ->

@@ -1,3 +1,22 @@
+## 0.10.0
+* Minimap position fix
+
+## 0.9.0
+* Solid tab background in Material UI
+* Trim minimap elements
+* Use Tab button to cycle tabs
+
+## 0.8.0
+* Tab context menu
+* Improved minimap
+
+## 0.7.0
+* Tab numbers
+* Navigate tabs using arrows
+* Stay updated on workspace changes
+* Use minimap standalone consumable
+* Travis CI
+
 ## 0.6.0
 * Change focus to item on click
 * Better extraction of tab icon

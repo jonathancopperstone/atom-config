@@ -1,7 +1,7 @@
 {
   "name": "expose",
   "main": "./lib/expose",
-  "version": "0.6.0",
+  "version": "0.10.0",
   "description": "Quick tab overview of open files",
   "keywords": [
     "tab",
@@ -22,18 +22,18 @@
   },
   "dependencies": {
     "atom-space-pen-views": "^2.0.3",
-    "sortablejs": "git+https://github.com/RubaXa/Sortable.git#1.2.0"
+    "sortablejs": "^1.3.0"
   },
-  "readme": "# Atom Tabs Exposé\n\nQuick tab overview of open files. Similar to Mac OSX Exposé / Mission Control, Firefox Tab Group, Safari and Chrome Tab Overview, etc.\n\n* The overview layout tries to simulate your current themes tab styling.\n* The text editor preview is taken from [Minimap](https://github.com/atom-minimap/minimap) if present, else a suitable file icon is used.\n* Shows file icons in tabs if the [file-icon package](https://github.com/DanBrooker/file-icons) is installed.\n\n![expose-package](https://raw.githubusercontent.com/mrodalgaard/atom-expose/master/screenshots/preview.png)\n\n## Keymaps\n\nToggle expose with <kbd>cmd-shift-e</kbd> on Mac OSX and <kbd>alt-shift-e</kbd> on Linux and Windows.\n\n<kbd>ESC</kbd> and <kbd>Enter</kbd> closes the expose panel.\n\n<kbd>1</kbd> - <kbd>9</kbd> jumps to tabs.\n\n## Tasks\n\n- [x] Basic exposé functionality\n- [x] Activate and close tabs\n- [x] Add tests\n- [x] Add detailed unit tests\n- [x] Tab preview images with fallback\n- [x] Show preview of images\n- [x] Tab icons\n- [x] Custom icons for more view classes\n- [x] Keyboard shortcuts (e.g. numbers)\n- [x] Move / sortable tabs\n- [ ] Split overview into panes\n- [ ] Stay updated on workspace changes\n- [ ] Show all project files options\n- [ ] Serialize enabled\n- [ ] Remove dependency on minimap for previews\n\n> Contributions, bug reports and feature requests are very welcome.\n\n> &nbsp; &nbsp; _- Martin_\n",
+  "readme": "# Atom Tabs Exposé [![Build Status](https://travis-ci.org/mrodalgaard/atom-expose.svg)](https://travis-ci.org/mrodalgaard/atom-expose)\n\nQuick tab overview of open files. Similar to Mac OSX Exposé / Mission Control, Firefox Tab Group, Safari and Chrome Tab Overview, etc.\n\n* Shows active tab, panes and previews.\n* The text editor preview is taken from [Minimap](https://github.com/atom-minimap/minimap) if present, else a suitable file icon is used.\n* Shows file icons in tabs if the [file-icon package](https://github.com/DanBrooker/file-icons) is installed.\n\n![expose-package](https://raw.githubusercontent.com/mrodalgaard/atom-expose/master/screenshots/preview.png)\n\n## Keymaps\n\nToggle expose with <kbd>cmd-shift-e</kbd> on Mac OSX and <kbd>alt-shift-e</kbd> on Linux and Windows.\n\n<kbd>ESC</kbd> and <kbd>Enter</kbd> closes the expose panel.\n\n<kbd>1</kbd> - <kbd>9</kbd> jumps to tabs.\n\n<kbd>←</kbd> and <kbd>→</kbd> select tabs.\n\n## Tasks\n\n- [x] Basic exposé functionality\n- [x] Activate and close tabs\n- [x] Add tests\n- [x] Add detailed unit tests\n- [x] Tab preview images with fallback\n- [x] Show preview of images\n- [x] Tab icons\n- [x] Custom icons for more view classes\n- [x] Keyboard shortcuts (e.g. numbers)\n- [x] Move / sortable tabs\n- [x] Stay updated on workspace changes\n- [x] Show active tab and navigate with arrows\n- [ ] Split overview into panes\n- [ ] Show all project files options\n\n> Contributions, bug reports and feature requests are very welcome.\n\n> &nbsp; &nbsp; _- Martin_\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/mrodalgaard/atom-expose/issues"
   },
   "homepage": "https://github.com/mrodalgaard/atom-expose#readme",
-  "_id": "expose@0.6.0",
-  "_shasum": "a490b0db4743b74dfbc07c0ea0bc577f5bfaad30",
-  "_resolved": "file:..\\d-115818-7768-r2bgvo\\package.tgz",
-  "_from": "..\\d-115818-7768-r2bgvo\\package.tgz",
+  "_id": "expose@0.10.0",
+  "_shasum": "dc327ee617c06beb4b4efdeed9fa679628ec1b79",
+  "_resolved": "file:..\\d-115105-2300-1mr79kt\\package.tgz",
+  "_from": "..\\d-115105-2300-1mr79kt\\package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -54,7 +54,7 @@
       },
       {
         "name": "grim",
-        "version": "1.4.2",
+        "version": "1.5.0",
         "path": "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\lib\\grim.js"
       },
       {
@@ -74,8 +74,18 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.7",
+        "version": "0.10.8",
         "path": "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\index.js"
+      },
+      {
+        "name": "es6-iterator",
+        "version": "2.0.0",
+        "path": "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\index.js"
+      },
+      {
+        "name": "es6-symbol",
+        "version": "3.0.1",
+        "path": "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\index.js"
       },
       {
         "name": "es6-iterator",
@@ -114,7 +124,7 @@
       },
       {
         "name": "sortablejs",
-        "version": "1.2.0",
+        "version": "1.4.2",
         "path": "node_modules\\sortablejs\\Sortable.js"
       }
     ],
@@ -122,8 +132,7 @@
       ".coffee": [
         "lib\\expose-tab-view.coffee",
         "lib\\expose-view.coffee",
-        "lib\\expose.coffee",
-        "lib\\util.coffee"
+        "lib\\expose.coffee"
       ],
       ".js": [
         "node_modules\\atom-space-pen-views\\lib\\main.js",
@@ -360,6 +369,21 @@
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\math\\trunc\\shim.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\math\\_pack-ieee754.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\math\\_unpack-ieee754.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\#\\chain.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\array.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\for-of.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\get.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\index.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\is-iterable.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\string.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\valid-iterable.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\implement.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\index.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\is-implemented.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\is-native-implemented.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\is-symbol.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\polyfill.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\validate-symbol.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\#\\index.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\#\\pad.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\epsilon\\implement.js",
@@ -378,6 +402,7 @@
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\is-nan\\index.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\is-nan\\is-implemented.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\is-nan\\shim.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\is-natural.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\is-number.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\is-safe-integer\\implement.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\number\\is-safe-integer\\index.js",
@@ -406,6 +431,8 @@
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\object\\eq.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\object\\every.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\object\\filter.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\object\\find-key.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\object\\find.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\object\\first-key.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\object\\flatten.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\object\\for-each.js",
@@ -514,6 +541,7 @@
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\string\\#\\starts-with\\index.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\string\\#\\starts-with\\is-implemented.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\string\\#\\starts-with\\shim.js",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\string\\#\\uncapitalize.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\string\\format-method.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\string\\from-code-point\\implement.js",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\string\\from-code-point\\index.js",
@@ -639,7 +667,9 @@
         "node_modules\\sortablejs\\meteor\\example\\client\\define-object-type.js",
         "node_modules\\sortablejs\\meteor\\example\\model.js",
         "node_modules\\sortablejs\\meteor\\example\\server\\fixtures.js",
-        "node_modules\\sortablejs\\meteor\\methods.js",
+        "node_modules\\sortablejs\\meteor\\example\\server\\sortable-collections.js",
+        "node_modules\\sortablejs\\meteor\\methods-client.js",
+        "node_modules\\sortablejs\\meteor\\methods-server.js",
         "node_modules\\sortablejs\\meteor\\package.js",
         "node_modules\\sortablejs\\meteor\\reactivize.js",
         "node_modules\\sortablejs\\meteor\\test.js",
@@ -653,6 +683,8 @@
         "node_modules\\atom-space-pen-views\\node_modules\\fuzzaldrin\\package.json",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\api.json",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\d\\package.json",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\package.json",
+        "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\package.json",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\package.json",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es6-iterator\\package.json",
         "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es6-symbol\\package.json",
@@ -669,7 +701,6 @@
         "node_modules\\atom-space-pen-views\\package.json",
         "node_modules\\sortablejs\\bower.json",
         "node_modules\\sortablejs\\component.json",
-        "node_modules\\sortablejs\\meteor\\example\\package.json",
         "node_modules\\sortablejs\\package.json",
         "package.json"
       ]
@@ -682,7 +713,8 @@
           "spec"
         ],
         "dependencies": {
-          "atom-space-pen-views": "^2.0.3"
+          "atom-space-pen-views": "^2.0.3",
+          "sortablejs": "^1.3.0"
         }
       },
       {
@@ -904,8 +936,31 @@
           "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\test\\string\\raw"
         ],
         "dependencies": {
-          "es6-iterator": "~0.1.3",
-          "es6-symbol": "~2.0.1"
+          "es6-iterator": "2",
+          "es6-symbol": "3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\#",
+          "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator",
+          "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\test\\#",
+          "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-iterator\\test"
+        ],
+        "dependencies": {
+          "d": "^0.1.1",
+          "es5-ext": "^0.10.7",
+          "es6-symbol": "3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol",
+          "node_modules\\atom-space-pen-views\\node_modules\\space-pen\\node_modules\\grim\\node_modules\\emissary\\node_modules\\es6-weak-map\\node_modules\\es5-ext\\node_modules\\es6-symbol\\test"
+        ],
+        "dependencies": {
+          "d": "~0.1.1",
+          "es5-ext": "~0.10.8"
         }
       },
       {

@@ -8,19 +8,20 @@
   metrics:
     userId: "ea44d27071c3e91095453ed19e1d05c078fe9aa4"
   editor:
-    fontSize: 12
     softWrap: true
     softWrapAtPreferredLineLength: true
-    fontFamily: "Consolas"
     invisibles: {}
     preferredLineLength: 140
     tabLength: 4
+    showInvisibles: true
+    showIndentGuide: true
+    fontFamily: "Consolas"
+    fontSize: 12
   core:
     themes: [
-      "seti-ui"
-      "seti-syntax"
+      "one-dark-ui"
+      "solarized-dark-syntax"
     ]
-    autoHideMenuBar: true
   "tree-view": {}
 ".js.regexp.source":
   editor:
