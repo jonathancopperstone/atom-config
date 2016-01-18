@@ -3,3 +3,4 @@ compile-cache
 .apm
 .npm
 .node-gyp
+blob-store
